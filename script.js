@@ -62,9 +62,9 @@ function setPerguntas(perguntaTexto, a, b, c, resposta) {
 
     document.querySelectorAll('.alternativa').forEach((alt) => {
         alt.addEventListener('click', () => {
-            const texto = alt.querySelector('.texto-alternativa').textContent
+            const letra = alt.querySelector('.letra-alternativa').textContent.toLocaleLowerCase()
 
-            let condition = resposta == texto ? 'correto' : 'errado'
+            let condition = resposta == letra ? 'correto' : 'errado'
             alt.classList.add(`${condition}`)
 
             if (condition == 'correto') {
