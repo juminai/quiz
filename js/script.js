@@ -12,10 +12,7 @@ const resultados = JSON.parse(localStorage.getItem('resultados'))
 
 const temaAtual = resultados.theme
 
-themeQuiz.textContent = `Quiz de ${
-    temaAtual.includes('mat') ? 'Matemática' :
-    temaAtual.includes('eng') ? 'Inglês' : 'Lógica'
-}`;
+themeQuiz.textContent = `Quiz de ${resultados.name}`
 
 let acertou = 0;
 let pontos = 0;
@@ -26,7 +23,7 @@ let jaSelecionado = false
 
 async function loadPerguntas() {
     try {
-        const busca = await fetch('http://localhost:3000/perguntas')
+        const busca = await fetch('https://json-server-two-nu.vercel.app/perguntas')
         perguntas = await busca.json()
         setPerguntaAtual();
 

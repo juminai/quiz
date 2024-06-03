@@ -1,65 +1,66 @@
 @import url(./styles.css);
 
 .results {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: var(--bg);
-  gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg);
+    gap: 3rem;
 }
 
 .resultados {
-  background-color: var(--white);
-  border-radius: .5rem;
-  width: 335px;
+    background-color: var(--white);
+    border-radius: .5rem;
+    width: 435px;
 }
 
 .tema-quiz {
-  font-size: 1.5rem;
-  font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .score-div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: .8rem 1.2rem;
-  gap: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 1.2rem;
+    gap: .5rem;
 }
 
 .score-div img {
-  border-radius: 100%;
-  background-color: var(--bg);
-  width: 30px;
-  height: 30px;
-  padding: .5rem;
+    border-radius: 100%;
+    background-color: var(--bg);
+    width: 30px;
+    height: 30px;
+    padding: .5rem;
 }
 
 .score-frase {
-  margin: 0 auto 0 0;
-  font-weight: 500;
+    margin: 0 auto 0 0;
+    font-weight: 500;
 }
 
-.score-total, .acertou-total {
-  font-weight: bold;
+.score-total,
+.acertou-total {
+    font-weight: bold;
 }
 
 .separator {
-  height: 1px;
-  background-color: var(--bg);
+    height: 1px;
+    background-color: var(--bg);
 }
 
 .okay__button {
-  background-color: var(--accent);
-  font-weight: bold;
-  border-radius: .4rem;
-  min-width: 335px;
-  min-height: 60px;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+    background-color: var(--accent);
+    font-weight: bold;
+    border-radius: .4rem;
+    min-width: 335px;
+    min-height: 60px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
