@@ -5,55 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
+    <script src="./js/inicio.js" defer></script>
+    <link rel="stylesheet" href="./css/inicio.css">
 </head>
 
-<body>
+<body class="inicio">
+    <h1><span class="efeito">Quiz</span> Dimaisi</h1>
 
-    <header>
-        <div class="score">
-            <img src="./assets/image 3.svg" alt="">
-            <p class="pontos">200</p>
-        </div>
+    <div class="sep"></div>
 
-        <h2 class="tema-quiz">Tema Quiz #666</h2>
-
-        <button type="button" class="close__button">X</button>
-    </header>
-
-    <main class="quiz">
-
-        <h1 class="pergunta">Pergunta</h1>
-
-        <div class="alternativas">
-            <div class="alternativa alternativa-a">
-                <p class="letra-alternativa">A</p>
-                <p class="texto-alternativa">Alternativa a</p>
-            </div>
-
-            <div class="alternativa alternativa-a">
-                <p class="letra-alternativa">B</p>
-                <p class="texto-alternativa">Alternativa b</p>
-            </div>
-
-            <div class="alternativa alternativa-a">
-                <p class="letra-alternativa">C</p>
-                <p class="texto-alternativa">Alternativa c</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="progresso">
-            <progress id="progress-bar" value="" max=""></progress>
-            <p id="status-questoes"></p>
-        </div>
-
-        <button type="button" class="continuar__button">CONTINUE</button>
-        
-    </footer>
-
+    <div class="opcoes">
+        <button type="button" >Matematica</button>
+        <button type="button" >English</button>
+        <button type="button" >Logica</button>
+    </div>
 </body>
 
 </html>

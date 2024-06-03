@@ -1,0 +1,49 @@
+@import url(./styles.css);
+
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    min-height: 100vh;
+    font-family: var(--font);
+    background-color: var(--bg);
+}
+
+span {
+    background-color: var(--accent);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.opcoes button {
+    background-color: var(--white);
+    width: 335px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--fg);
+    font-size: 1.3rem;
+    border: none;
+    box-shadow: 2px 4px 4px #00000023;
+
+    &:hover {
+        background-color: #ffffffb0;
+    }
+}

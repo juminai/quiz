@@ -1,76 +1,94 @@
 {
-  "lista": [
-    {
-      "id": 1,
-      "pergunta": "1 + 1",
-      "a": "3",
-      "b": "4",
-      "c": "2",
-      "resposta": "c"
-    },
-    {
-      "id": 2,
-      "pergunta": "2 + 1",
-      "a": "3",
-      "b": "4",
-      "c": "5",
-      "resposta": "a"
-    },
-    {
-      "id": 3,
-      "pergunta": "3 + 1",
-      "a": "3",
-      "b": "4",
-      "c": "5",
-      "resposta": "b"
-    },
-    {
-      "id": 4,
-      "pergunta": "4 + 1",
-      "a": "5",
-      "b": "4",
-      "c": "10",
-      "resposta": "a"
-    },
-    {
-      "id": 5,
-      "pergunta": "6 + 1",
-      "a": "7",
-      "b": "40",
-      "c": "52",
-      "resposta": "a"
-    },
-    {
-      "id": 6,
-      "pergunta": "8 + 1",
-      "a": "9",
-      "b": "42",
-      "c": "52",
-      "resposta": "a"
-    },
-    {
-      "id": 7,
-      "pergunta": "9 + 1",
-      "a": "32",
-      "b": "10",
-      "c": "55",
-      "resposta": "b"
-    },
-    {
-      "id": 8,
-      "pergunta": "10 + 1",
-      "a": "3",
-      "b": "49",
-      "c": "11",
-      "resposta": "c"
-    },
-    {
-      "id": 9,
-      "pergunta": "11 + 1",
-      "a": "31",
-      "b": "12",
-      "c": "54",
-      "resposta": "b"
-    }
-  ]
+  "perguntas": {
+    "matematica": [
+      {
+        "pergunta": "Qual é o resultado de 25 - 13?",
+        "a": "10",
+        "b": "12",
+        "c": "15",
+        "resposta": "b"
+      },
+      {
+        "pergunta": "Quanto é 8 x 7?",
+        "a": "54",
+        "b": "56",
+        "c": "64",
+        "resposta": "b"
+      },
+      {
+        "pergunta": "Se um pacote de lápis custa R$ 3 e você compra 4 pacotes, quanto você pagará?",
+        "a": "R$ 9",
+        "b": "R$ 10",
+        "c": "R$ 12",
+        "resposta": "a"
+      },
+      {
+        "pergunta": "Se um retângulo tem comprimento 6 cm e largura 4 cm, qual é sua área?",
+        "a": "20 cm²",
+        "b": "24 cm²",
+        "c": "30 cm²",
+        "resposta": "b"
+      }
+    ],
+    "english": [
+      {
+        "pergunta": "Qual é a forma plural de 'child'?",
+        "a": "Childs",
+        "b": "Childes",
+        "c": "Children",
+        "resposta": "c"
+      },
+      {
+        "pergunta": "Qual palavra é sinônimo de 'happy'?",
+        "a": "Sad",
+        "b": "Glad",
+        "c": "Angry",
+        "resposta": "b"
+      },
+      {
+        "pergunta": "Qual frase está gramaticalmente correta?",
+        "a": "She don't like ice cream",
+        "b": "She doesn't like ice cream",
+        "c": "She not likes ice cream",
+        "resposta": "b"
+      },
+      {
+        "pergunta": "Qual é o oposto de 'brave'?",
+        "a": "Courageous",
+        "b": "Fearless",
+        "c": "Cowardly",
+        "resposta": "c"
+      }
+    ],
+    "logica": [
+      {
+        "pergunta": "Qual é o próximo número na sequência? 2, 4, 6, 8, ...",
+        "a": "10",
+        "b": "12",
+        "c": "9",
+        "resposta": "b"
+      },
+      {
+        "pergunta": "Qual palavra não pertence? Maçã, Banana, Laranja, Cenoura.",
+        "a": "Maçã",
+        "b": "Banana",
+        "c": "Cenoura",
+        "resposta": "c"
+      },
+      {
+        "pergunta": "Qual é o número que falta? 3, 6, 9, __, 15",
+        "a": "10",
+        "b": "11",
+        "c": "12",
+        "resposta": "c"
+      },
+      {
+        "pergunta": "Qual é a forma geométrica que vem a seguir? Quadrado, Círculo, Triângulo, __",
+        "a": "Oval",
+        "b": "Retângulo",
+        "c": "Pentágono",
+        "resposta": "b"
+      }
+    ]
+  }
 }

@@ -1,24 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url(./styles.css);
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --bg: #EDE8E3;
-    --fg: #060710;
-    --white: #F4F3F6;
-    --gray: #B4B3B5;
-    --gray-dim: #757575;
-    --blue: #191D63;
-    --accent: #31CD63;
-    --accent-dim: #45C486;
-    --red: #A40021;
-    --font: "DM Sans", sans-serif;
-}
-
-body {
+.principal {
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
@@ -113,6 +95,14 @@ footer {
     min-height: 60px;
     color: var(--white);
     cursor: pointer;
+
+    &:disabled {
+        background-color: var(--gray-plus);
+    }
+}
+
+.cursor-not-allowed {
+    cursor: default;
 }
 
 header {
@@ -126,6 +116,8 @@ header {
     flex-grow: 1;
     text-align: center;
     margin-right: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .score {
@@ -146,6 +138,7 @@ header {
     min-width: 40px;
     min-height: 40px;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .progresso {
@@ -171,7 +164,8 @@ header {
     }
 }
 
-.status-questoes {
+#status-questoes {
     color: var(--gray-dim);
-    font-weight: 500;
+    font-weight: bold;
+    width: 5rem;
 }
