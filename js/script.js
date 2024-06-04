@@ -2,8 +2,8 @@ const pergunta = document.querySelector('.pergunta')
 const alternativas = document.querySelector('.alternativas')
 const continueBtn = document.querySelector('.continuar__button')
 const alternativa = document.querySelectorAll('.alternativa')
-const totalQuestoes = document.getElementById('status-questoes')
-const progressBar = document.getElementById('progress-bar')
+const totalQuestoes = document.querySelectorAll('#status-questoes')
+const progressBar = document.querySelectorAll('#progress-bar')
 const score = document.querySelector('.pontos')
 const themeQuiz = document.querySelector('.tema-quiz')
 const closeBtn = document.querySelector('.close__button')
@@ -52,10 +52,14 @@ function setPerguntaAtual() {
             perguntaAtual.resposta
         );
 
-        totalQuestoes.textContent = `${atual + 1}/${perguntas[temaAtual].length}`
+        totalQuestoes.forEach((total) => {
+            total.textContent = `${atual + 1}/${perguntas[temaAtual].length}`
+        })
 
-        progressBar.setAttribute('max', perguntas[temaAtual].length)
-        progressBar.setAttribute('value', atual + 1)
+        progressBar.forEach((bar) => {
+            bar.setAttribute('max', perguntas[temaAtual].length)
+            bar.setAttribute('value', atual + 1)
+        })
     }
 }
 
@@ -116,15 +120,19 @@ closeBtn.addEventListener('click', () => {
 
 continueBtn.addEventListener('click', () => {
     atual++
+
     if (atual < perguntas[temaAtual].length) {
         setPerguntaAtual()
     } else {
-
         resultados.score = pontosx10
         resultados.acertos = acertou
 
         localStorage.setItem('resultados', JSON.stringify(resultados))
         window.location.href = './results.html'
+    }
+
+    if (perguntas[temaAtual].length - atual == 1) {
+        continueBtn.textContent = 'FINISH'
     }
 })
 

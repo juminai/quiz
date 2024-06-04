@@ -56,9 +56,18 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: contain;
+}
+
+.letra-alternativa {
     width: 50px;
     height: 50px;
-    background-size: contain;
+}
+
+.sinal-correto {
+    width: 35px;
+    padding: .45rem;
+    height: 35px;
 }
 
 .texto-alternativa {
@@ -115,7 +124,7 @@ header {
 .tema-quiz {
     flex-grow: 1;
     text-align: center;
-    margin-right: 4rem;
+    margin: 0 auto;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -168,4 +177,86 @@ header {
     color: var(--gray-dim);
     font-weight: bold;
     width: 5rem;
+}
+
+.progresso-mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 0;
+    }
+
+    .principal {
+        padding: 2rem;
+        gap: 2.5rem;
+        min-height: 90vh;
+    }
+
+    .tema-quiz {
+        max-width: 200px;
+        margin: 0;
+    }
+
+    .quiz {
+        flex: 0;
+        gap: 0;
+        justify-content: start;
+    }
+
+    .pergunta {
+        min-height: 200px;
+    }
+
+    .alternativas {
+        gap: 2rem;
+    }
+
+    .alternativa {
+        min-width: 335px;
+    }
+
+    .progresso {
+        display: none;
+    }
+
+    .progresso-mobile {
+        display: flex;
+        gap: 0;
+        align-items: center;
+    
+        progress {
+            appearance: none;
+            width: 100%;
+            height: 15px;
+        }
+    
+        progress::-webkit-progress-bar {
+            background-color: var(--white);
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+    
+        progress::-webkit-progress-value {
+            background-color: var(--accent);
+            border-radius: .5rem;
+        }
+    }
+
+    #status-questoes {
+        width: 3rem;
+        text-align: end;
+    }
+
+    footer {
+        background-color: transparent;
+        margin-top: auto;
+        padding: 0;
+    }
+
+    .continuar__button {
+        min-width: 365px;
+        font-size: 1rem;
+    }
 }
