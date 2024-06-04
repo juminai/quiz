@@ -1,6 +1,11 @@
 const scoreResult = document.querySelector('.score-total')
 const acertouTotal = document.querySelector('.acertou-total')
 const themeQuiz = document.querySelector('.tema-quiz')
+const exitBtn = document.querySelector('.close__button')
+
+exitBtn.addEventListener('click', () => {
+  document.location.href = '../index.html'
+})
 
 const resultados = JSON.parse(localStorage.getItem('resultados'))
 
