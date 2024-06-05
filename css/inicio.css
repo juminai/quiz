@@ -41,7 +41,6 @@ span {
     color: var(--fg);
     font-size: 1.3rem;
     border: none;
-    box-shadow: 2px 4px 4px #00000023;
 
     &:hover {
         background-color: #ffffffb0;

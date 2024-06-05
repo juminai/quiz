@@ -11,4 +11,4 @@ const resultados = JSON.parse(localStorage.getItem('resultados'))
 
 scoreResult.textContent = resultados.score
 acertouTotal.textContent = resultados.acertos
-themeQuiz.textContent = `Resultado do Quiz de ${resultados.name}`
+themeQuiz.textContent = `Resultado do Quiz de ${resultados.theme}`
