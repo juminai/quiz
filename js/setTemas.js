@@ -4,17 +4,15 @@ const opcoes = document.querySelector('.opcoes')
 
 async function setTemas() {
     const temas = await conectaApi.listaTemas()
-    opcoes.innerHTML = `
-      <button type="button" id="opcoes__btn-1">${temas[0]}</button>
-      <button type="button" id="opcoes__btn-2">${temas[1]}</button>
-      <button type="button" id="opcoes__btn-3">${temas[2]}</button>
-    `
 
-  const buttons = document.querySelectorAll('button')
+    temas.forEach((temaBtn) => {
+        const btn = document.createElement('button')
+        btn.setAttribute('type', 'button')
+        btn.textContent = temaBtn
+        opcoes.appendChild(btn)
 
-    buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            addTheme(btn.textContent)
+            addTheme(temaBtn)
             window.location.href = './quiz.html'
         })
     })

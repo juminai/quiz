@@ -106,10 +106,6 @@ footer {
     }
 }
 
-.cursor-not-allowed {
-    cursor: default;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -130,7 +126,7 @@ header {
     display: flex;
     gap: .5rem;
     align-items: center;
-    padding: .5rem 1rem;
+    padding: .5rem .6rem;
     border-radius: .4rem;
     font-weight: bold;
 }

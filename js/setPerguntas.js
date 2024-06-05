@@ -11,7 +11,7 @@ const closeBtn = document.querySelector('.close__button')
 const resultados = JSON.parse(localStorage.getItem('resultados'))
 const temaAtual = resultados.theme
 
-themeQuiz.textContent = `Quiz de ${temaAtual}`
+themeQuiz.textContent = temaAtual
 
 let perguntas = []
 let atual = 0;
@@ -64,8 +64,9 @@ function setPerguntaAtual() {
 
         const perguntaAtual = perguntas[temaAtual][atual];
 
-        setPerguntas(
-            perguntaAtual.pergunta,
+        pergunta.textContent = perguntaAtual.pergunta
+
+        setAlternativas(
             perguntaAtual.a,
             perguntaAtual.b,
             perguntaAtual.c,
@@ -87,30 +88,29 @@ function atualizaStatus() {
     })
 }
 
-function setPerguntas(perguntaTexto, a, b, c, resposta) {
-    pergunta.textContent = perguntaTexto;
+function setAlternativas(a, b, c, resposta) {
     continueBtn.disabled = true
     jaSelecionado = false
 
     alternativas.innerHTML = `
-  <div class="alternativa alternativa-a">
-      <p class="letra-alternativa">A</p>
-      <p class="texto-alternativa">${a}</p>
-  </div>
-  <div class="alternativa alternativa-b">
-      <p class="letra-alternativa">B</p>
-      <p class="texto-alternativa">${b}</p>
-  </div>
-  <div class="alternativa alternativa-c">
-      <p class="letra-alternativa">C</p>
-      <p class="texto-alternativa">${c}</p>
-  </div>
-  `;
+        <div class="alternativa alternativa-a">
+            <p class="letra-alternativa">A</p>
+            <p class="texto-alternativa">${a}</p>
+        </div>
+        <div class="alternativa alternativa-b">
+            <p class="letra-alternativa">B</p>
+            <p class="texto-alternativa">${b}</p>
+        </div>
+        <div class="alternativa alternativa-c">
+            <p class="letra-alternativa">C</p>
+            <p class="texto-alternativa">${c}</p>
+        </div>
+    `
 
     document.querySelectorAll('.alternativa').forEach((alt) => {
         alt.addEventListener('click', () => {
             if (!jaSelecionado) {
-                const letra = alt.querySelector('.letra-alternativa').textContent.toLocaleLowerCase()
+                const letra = alt.querySelector('.letra-alternativa').textContent.toLowerCase()
 
                 let condition = resposta == letra ? 'correto' : 'errado'
                 alt.classList.add(`${condition}`)
@@ -120,9 +120,11 @@ function setPerguntas(perguntaTexto, a, b, c, resposta) {
                     const sinalCorreto = document.createElement('img')
                     sinalCorreto.classList.add('sinal-correto')
                     sinalCorreto.setAttribute('src', './assets/Outline.svg');
+
                     const imgDiv = document.createElement('div')
                     imgDiv.classList.add('sinal-correto-div')
                     imgDiv.appendChild(sinalCorreto)
+                    
                     alt.replaceChild(imgDiv, alt.querySelector('.letra-alternativa'))
 
                     atualizaPontos()
@@ -134,7 +136,7 @@ function setPerguntas(perguntaTexto, a, b, c, resposta) {
 
                 document.querySelectorAll('.alternativa').forEach((alt) => {
                     if (alt != this) {
-                        alt.classList.add('cursor-not-allowed')
+                        alt.style.cursor = 'default'
                     }
                 })
             }

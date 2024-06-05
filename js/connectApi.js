@@ -11,7 +11,7 @@ async function listaTemas() {
     try {
         const data = await listaPerguntas()
         const temas = Object.keys(data)
-        
+
         return temas
     } catch (e) {
         console.log('error: ', e)
