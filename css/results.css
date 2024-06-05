@@ -3,7 +3,7 @@
 .results {
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
+    height: 90vh;
     background-color: var(--bg);
     padding: 2rem;
     font-family: var(--font);
@@ -21,7 +21,7 @@ main {
 .resultados {
     background-color: var(--white);
     border-radius: .5rem;
-    width: 435px;
+    width: 27rem;
 }
 
 .tema-quiz {
@@ -41,8 +41,8 @@ main {
 .score-div img {
     border-radius: 100%;
     background-color: var(--bg);
-    width: 30px;
-    height: 30px;
+    width: 1.8rem;
+    height: 1.8rem;
     padding: .5rem;
 }
 
@@ -70,8 +70,8 @@ footer {
     background-color: var(--accent);
     font-weight: bold;
     border-radius: .4rem;
-    min-width: 435px;
-    min-height: 60px;
+    width: 27rem;
+    height: 3.75rem;
     color: var(--white);
     display: flex;
     align-items: center;
@@ -84,8 +84,8 @@ footer {
     background-color: var(--white);
     font-weight: bold;
     font-size: 1.2rem;
-    min-width: 40px;
-    min-height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
     cursor: pointer;
     margin-left: auto;
@@ -96,21 +96,44 @@ header {
 
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 430px) {
 
     .tema-quiz {
         text-align: center;
     }
 
     .results {
-        min-height: 90vh;
+        height: 90vh;
     }
 
     .resultados {
-        width: 365px;
+        width: 22.8rem;
     }
 
     .okay__button {
-        min-width: 365px;
+        width: 22.8rem;
     }
+}
+
+@media screen and (max-width: 393px) {
+    .resultados, .okay__button {
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .resultados, .okay__button {
+        width: 20rem;
+    }
+
+    main {
+        gap: 2rem;
+    }
+
+    .results {
+        height: 94vh;
+        padding: 1rem 1rem 0;
+    }
+
 }

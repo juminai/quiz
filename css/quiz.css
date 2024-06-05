@@ -4,7 +4,7 @@
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     font-family: var(--font);
     color: var(--fg);
 }
@@ -21,9 +21,11 @@
     background-color: var(--white);
     padding: 1rem;
     border-radius: .5rem;
-    min-width: 30rem;
+    width: 30rem;
     gap: 1rem;
     cursor: pointer;
+    font-size: 1.2rem;
+    
 }
 
 
@@ -56,14 +58,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 3.15rem;
+    height: 3.15rem;
 }
 
 
 .sinal-correto {
-    width: 35px;
-    height: 35px;
+    width: 2.18rem;
+    height: 2.18rem;
 }
 
 .texto-alternativa {
@@ -96,8 +98,8 @@ footer {
     background-color: var(--accent);
     font-weight: bold;
     border-radius: .4rem;
-    min-width: 240px;
-    min-height: 60px;
+    width: 15rem;
+    height: 3.75rem;
     color: var(--white);
     cursor: pointer;
 
@@ -136,8 +138,8 @@ header {
     background-color: var(--white);
     font-weight: bold;
     font-size: 1.2rem;
-    min-width: 40px;
-    min-height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
     cursor: pointer;
 }
@@ -150,7 +152,7 @@ header {
     progress {
         appearance: none;
         width: 15rem;
-        height: 15px;
+        height: 0.93rem;
     }
 
     progress::-webkit-progress-bar {
@@ -175,7 +177,7 @@ header {
     display: none;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 430px) {
     header {
         padding: 0;
     }
@@ -183,11 +185,11 @@ header {
     .principal {
         padding: 2rem;
         gap: 2.5rem;
-        min-height: 90vh;
+        height: 90vh;
     }
 
     .tema-quiz {
-        max-width: 200px;
+        max-width: 12.5rem;
         margin: 0;
     }
 
@@ -198,7 +200,7 @@ header {
     }
 
     .pergunta {
-        min-height: 200px;
+        height: 12.5rem;
     }
 
     .alternativas {
@@ -206,7 +208,7 @@ header {
     }
 
     .alternativa {
-        min-width: 335px;
+        width: 22rem;
     }
 
     .progresso {
@@ -217,19 +219,19 @@ header {
         display: flex;
         gap: 0;
         align-items: center;
-    
+
         progress {
             appearance: none;
             width: 100%;
-            height: 15px;
+            height: 0.93rem;
         }
-    
+
         progress::-webkit-progress-bar {
             background-color: var(--white);
             border-radius: .5rem;
             overflow: hidden;
         }
-    
+
         progress::-webkit-progress-value {
             background-color: var(--accent);
             border-radius: .5rem;
@@ -248,7 +250,97 @@ header {
     }
 
     .continuar__button {
-        min-width: 365px;
+        width: 22.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .alternativa {
+        width: 19rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        padding: 0;
+    }
+
+    .principal {
+        padding: 1rem;
+        gap: 1rem;
+        height: 90vh;
+    }
+
+    .tema-quiz {
+        margin: 0;
+    }
+
+    .quiz {
+        flex: 0;
+        gap: 0;
+        justify-content: start;
+    }
+
+    .pergunta {
+        height: 12.5rem;
+        font-size: 1.75rem;
+    }
+
+    .alternativas {
+        gap: 1.5rem;
+    }
+
+    .alternativa {
+        width: 18rem;
+    }
+
+    .letra-alternativa,
+    .sinal-correto-div {
+        font-size: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .progresso {
+        display: none;
+    }
+
+    .progresso-mobile {
+        display: flex;
+        gap: 0;
+        align-items: center;
+
+        progress {
+            appearance: none;
+            width: 100%;
+            height: 0.93rem;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: var(--white);
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: var(--accent);
+            border-radius: .5rem;
+        }
+    }
+
+    #status-questoes {
+        width: 3rem;
+        text-align: end;
+    }
+
+    footer {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .continuar__button {
+        width: 20rem;
         font-size: 1rem;
     }
 }
