@@ -92,6 +92,7 @@ footer {
     display: flex;
     align-items: center;
     color: var(--fg);
+    justify-content: center;
 }
 
 header {
