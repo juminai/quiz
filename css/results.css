@@ -89,6 +89,9 @@ footer {
     border-radius: 100%;
     cursor: pointer;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: var(--fg);
 }
 
 header {
